@@ -99,7 +99,7 @@ docker-compose ps
 ※-aオプションをつけると終了したコンテナも表示される
 
 
-## [clone後 初回起動時] Dockerコンテナが正常に起動しない問題の対処法
+## [clone後 初回起動] Dockerコンテナが正常に起動しない問題の対処法
 
 #### 発生状態
 `docker-compose up`を実行後にdockerコンテナが正常に起動せず、logに以下の様に出力されます。
@@ -128,7 +128,6 @@ Done in 366.80s.
 $ docker-compose up
 ```
 [[この問題についての詳細はこちら]](https://qiita.com/yama_ryoji/items/1de1f2e9e206382c4aa5)
-
 
 
 
