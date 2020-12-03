@@ -10,7 +10,8 @@
 
 ## Docker操作
 ゼロからdocker環境を立ち上げる場合は、上から順にコマンドを実行すればOK
-### docker imageのビルド
+
+### docker imageのビルド（約10分ほどかかります。）
 ```
 docker-compose build
 ```
@@ -30,13 +31,13 @@ web_1  | * Listening on tcp://0.0.0.0:3000
 web_1  | Use Ctrl-C to stop
 ```
 
-### docker-composeで起動しているコンテナを確認する方法
+### docker-composeで起動しているコンテナの確認方法
 ```
 docker-compose ps
 ```
 ※起動状態：State = Up 、停止状態：State = Exit
 
-### 起動しているコンテナに入りRails環境構築を行う。
+### 起動しているコンテナに入りRails環境構築を行う
 このコマンドで コンテナに入る。
 ```
 docker-compose exec web bash
@@ -107,7 +108,7 @@ docker-compose ps
 
 #### 対処法
 
-以下の方法で、yarnをインストールしてください。（5分ほどかかります。）
+以下の方法で、yarnをインストールしてください。（約5分ほどかかります。）
 ```
 $ docker-compose run --rm web yarn install
 ```
