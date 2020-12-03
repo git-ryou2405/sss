@@ -36,8 +36,8 @@ docker-compose ps
 ```
 ※起動状態：State = Up 、停止状態：State = Exit
 
-### 起動しているコンテナに入り環境を整える
-以下のコマンドで、コンテナに入る。
+### 起動しているコンテナに入りRails環境構築を行う。
+このコマンドで、コンテナに入る。
 ```
 docker-compose exec web bash
 ```
@@ -46,16 +46,16 @@ docker-compose exec web bash
 root@c04fbf9df6e7:/myapp#
 ```
 
-- コンテナ内で、bundle installする
+##### コンテナ内で、bundle installする
 ```
 # bundle install
 ```
 
-- コンテナ内で、DBを作成する
+##### コンテナ内で、DBを作成する
 ```
 # rails db:create
 ```
-- コンテナ内で、マイグレーション実行
+##### コンテナ内で、マイグレーション実行
 ```
 # rails db:migrate
 ```
