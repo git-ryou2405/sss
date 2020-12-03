@@ -52,13 +52,15 @@ docker-compose run web bundle install
 docker-compose exec web bash
 ```
 ※コンテナに入ると以下の様な表示になり、ターミナルと同じようにコマンド入力できる。
+```
 root@c04fbf9df6e7:/myapp#
+```
 
-- DBを作成する
+- コンテナ内で、DBを作成する
 ```
 # rails db:create
 ```
-- マイグレーション実行
+- コンテナ内で、マイグレーション実行
 ```
 # rails db:migrate
 ```
@@ -69,16 +71,16 @@ root@c04fbf9df6e7:/myapp#
 # exit
 ```
 
-### 起動中のdocker-composeコンテナを停止
+### docker-composeコンテナを停止する方法
 ```
 docker-compose stop
 ```
 
-### ログの確認
+### ログの確認方法
 ```
 docker-compose logs
 ```
-### 停止中のdocker-composeコンテナの削除
+### 停止中のdocker-composeコンテナを削除する方法
 ※対象：カレントディレクトリのdocker-composeコンテナ
 ```
 docker-compose rm
@@ -95,6 +97,7 @@ docker ps
 docker-compose ps
 ```
 ※-aオプションをつけると終了したコンテナも表示される
+
 
 ## Dockerコンテナが正常に起動しない問題の対処法
 
