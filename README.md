@@ -34,26 +34,21 @@ web_1  | Use Ctrl-C to stop
 ```
 docker-compose ps
 ```
-※起動している場合：State = Up 、停止している場合：State = Exit
+※起動状態：State = Up 、停止状態：State = Exit
 
-### docker環境でbundle installを実行する
-###### docker-composeを起動中の場合
-```
-docker-compose exec web bundle install
-```
-###### docker-composeを起動していない場合
-```
-docker-compose run web bundle install
-```
-### railsコマンドを実行する
-##### docker-composeで起動しているコンテナに入る
-コンテナに入った後、railsコマンドが実行できる
+### 起動しているコンテナに入り環境を整える
+以下のコマンドで、コンテナに入る。
 ```
 docker-compose exec web bash
 ```
 ※コンテナに入ると以下の様な表示になり、ターミナルと同じようにコマンド入力できる。
 ```
 root@c04fbf9df6e7:/myapp#
+```
+
+- コンテナ内で、bundle installする
+```
+# bundle install
 ```
 
 - コンテナ内で、DBを作成する
@@ -99,7 +94,7 @@ docker-compose ps
 ※-aオプションをつけると終了したコンテナも表示される
 
 
-## [clone後 初回起動] Dockerコンテナが正常に起動しない問題の対処法
+## [clone後 初回] Dockerコンテナが正常に起動しない問題の対処法
 
 #### 発生状態
 `docker-compose up`を実行後にdockerコンテナが正常に起動せず、logに以下の様に出力されます。
@@ -127,7 +122,7 @@ Done in 366.80s.
 ```
 $ docker-compose up
 ```
-[[この問題についての詳細はこちら]](https://qiita.com/yama_ryoji/items/1de1f2e9e206382c4aa5)
+[[この問題についての詳細]](https://qiita.com/yama_ryoji/items/1de1f2e9e206382c4aa5)
 
 
 
