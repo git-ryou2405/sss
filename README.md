@@ -37,7 +37,7 @@ docker-compose ps
 ※起動状態：State = Up 、停止状態：State = Exit
 
 ### 起動しているコンテナに入りRails環境構築を行う。
-このコマンドで、コンテナに入る。
+このコマンドで コンテナに入る。
 ```
 docker-compose exec web bash
 ```
@@ -46,22 +46,22 @@ docker-compose exec web bash
 root@c04fbf9df6e7:/myapp#
 ```
 
-##### コンテナ内で、bundle installする
+#### コンテナ内で、bundle installする
 ```
 # bundle install
 ```
 
-##### コンテナ内で、DBを作成する
+#### コンテナ内で、DBを作成する
 ```
 # rails db:create
 ```
-##### コンテナ内で、マイグレーション実行
+#### コンテナ内で、マイグレーション実行
 ```
 # rails db:migrate
 ```
 ※railsページが見れるようになります。http://localhost:3000/
 
-- コンテナから出る
+##### コンテナから出る
 ```
 # exit
 ```
@@ -118,7 +118,7 @@ $ docker-compose run --rm web yarn install
 Done in 366.80s.
 ```
 
-最後に以下コマンドにより正常に起動します。
+最後に起動コマンドにより正常に起動します。
 ```
 $ docker-compose up
 ```
