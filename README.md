@@ -18,8 +18,8 @@ docker-compose build
 ```
 docker-compose up
 ```
-<font color="red">※clone後の初回起動時（`docker-compose up`実行後）に「Dockerコンテナが正常に起動しない問題」が発生するので、
-`Ctrl + C`でコンテナを停止し、「Dockerコンテナが正常に起動しない問題の対処法」に従い実行する。</font>
+※clone後の初回起動時（`docker-compose up`実行後）に「Dockerコンテナが正常に起動しない問題」が発生するので、
+`Ctrl + C`でコンテナを停止し、「Dockerコンテナが正常に起動しない問題の対処法」に従い実行する。
 
 
 ※`docker-compose up`で正常に起動すると下記のようなログが出力される。
@@ -50,10 +50,10 @@ docker-compose run web bundle install
 コンテナに入った後、railsコマンドが実行できる
 ```
 docker-compose exec web bash
-
+```
 ※コンテナに入ると以下の様な表示になり、ターミナルと同じようにコマンド入力できる。
 root@c04fbf9df6e7:/myapp#
-```
+
 - DBを作成する
 ```
 # rails db:create
