@@ -19,7 +19,7 @@ docker-compose build
 docker-compose up
 ```
 ※clone後の初回起動時（`docker-compose up`実行後）に「Dockerコンテナが正常に起動しない問題」が発生するので、
-`Ctrl + C`でコンテナを停止し、「Dockerコンテナが正常に起動しない問題の対処法」に従い実行する。
+`Ctrl + C`でコンテナを停止し、「Dockerコンテナが正常に起動しない問題」の対処法を実行する。
 
 
 ※`docker-compose up`で正常に起動すると下記のようなログが出力される。
@@ -94,7 +94,7 @@ docker-compose ps
 ※-aオプションをつけると終了したコンテナも表示される
 
 
-## [clone後 初回] Dockerコンテナが正常に起動しない問題の対処法
+## [clone後 初回] Dockerコンテナが正常に起動しない問題
 
 #### 発生状態
 `docker-compose up`を実行後にdockerコンテナが正常に起動せず、logに以下の様に出力されます。
