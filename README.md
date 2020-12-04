@@ -1,17 +1,7 @@
-# Rails共同開発講座
-
-## Member
-
-- 名前: Tatty
-  - 好きなメソッド: map
-- 名前: ryoji
-  - 好きなメソッド: present
-
-
 ## Docker操作
 ゼロからdocker環境を立ち上げる場合は、上から順にコマンドを実行すればOK
 
-### docker imageのビルド（約10分ほどかかります。）
+### docker imageのビルド （約10分）
 ```
 docker-compose build
 ```
@@ -21,7 +11,6 @@ docker-compose up
 ```
 ※clone後の初回起動時（`docker-compose up`実行後）に「Dockerコンテナが正常に起動しない問題」が発生するので、
 `Ctrl + C`でコンテナを停止し、「Dockerコンテナが正常に起動しない問題」の対処法を実行する。
-
 
 ※`docker-compose up`で正常に起動すると下記のようなログが出力される。
 ```
@@ -71,11 +60,6 @@ root@c04fbf9df6e7:/myapp#
 ```
 docker-compose stop
 ```
-
-### ログの確認方法
-```
-docker-compose logs
-```
 ### 停止中のdocker-composeコンテナを削除する方法
 ※対象：カレントディレクトリのdocker-composeコンテナ
 ```
@@ -87,13 +71,22 @@ docker-compose rm
 docker system prune -a --volumes
 ```
 ### Dockerコンテナ一覧表示
+##### カレントのコンテナ一覧
 ```
-docker ps
-
 docker-compose ps
 ```
-※-aオプションをつけると終了したコンテナも表示される
-
+##### 起動中の全てのコンテナ一覧
+```
+docker ps
+```
+### Dockerイメージ一覧表示
+```
+docker images
+```
+### ログの確認方法
+```
+docker-compose logs
+```
 
 ## [clone後 初回] Dockerコンテナが正常に起動しない問題
 
@@ -108,23 +101,20 @@ docker-compose ps
 
 #### 対処法
 
-以下の方法で、yarnをインストールしてください。（約5分ほどかかります。）
+以下の方法で、yarnをインストールしてください。（約5分）
 ```
 $ docker-compose run --rm web yarn install
 ```
 
-実行が完了すると下記のようにログが出力されます
+実行が完了すると下記のようにログが出力されます。
 ```
 [4/4] Building fresh packages...
 Done in 366.80s.
 ```
 
-最後に起動コマンドにより正常に起動します。
+最後に、コンテナが正常に起動することを確認
 ```
 $ docker-compose up
 ```
 [[この問題についての詳細]](https://qiita.com/yama_ryoji/items/1de1f2e9e206382c4aa5)
-
-
-
 
